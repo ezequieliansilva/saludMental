@@ -1,0 +1,21 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8f9fa;
+}
+
+h1, h2 {
+  color: #2b6777;
+}
+
+.btn-primary {
+  background-color: #52ab98;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #3b8c7b;
+}
+
+footer {
+  background-color: #eaf4f4;
+}
