@@ -1,7 +1,7 @@
 var puntaje = 0;
 var pregunta = 0;
-var preguntas = ["¿La depresión es una enfermedad mental común?", "¿El ejercicio regular puede ayudar a mejorar la salud mental?", "¿La ansiedad es una respuesta normal al estrés?", "¿El sueño adecuado es importante para la salud mental?", "¿Hablar con un terapeuta puede ser beneficioso para la salud mental?"];
-respuestas_correctas = [0, 0, 0, 0, 0]; // Índices de las respuestas correctas
+var preguntas = ["¿La depresión es una enfermedad mental rara?", "¿El ejercicio regular puede ayudar a mejorar la salud mental?", "¿En raras ocasiones la ansiedad es una respuesta al estrés?", "¿El sueño adecuado es importante para la salud mental?", "¿Hablar con un terapeuta puede ser beneficioso para la salud mental?"];
+respuestas_correctas = [1, 0, 1, 0, 0]; // Índices de las respuestas correctas
 function juegazo() {
     alert("¡Bienvenido al juego de preguntas y respuestas sobre salud mental! Responde las siguientes preguntas:");
     pantalla = preguntar(pregunta);
@@ -29,9 +29,9 @@ function verificarRespuesta(pregunta, respuesta) {
     }
 }
 function preguntar (pregunta) {
-    var pantalla = "<h2>Pregunta " + (pregunta + 1) + " de " + preguntas.length + "</h2>";
-    pantalla += "<br><p>" + preguntas[pregunta] + "</p>";
-    pantalla += "<button class='btn btn-success' onclick='verificarRespuesta("+pregunta+",0)'>Sí</button>";
-    pantalla += "<button class='btn btn-danger' onclick='verificarRespuesta("+pregunta+",1)'>No</button>";
+    var pantalla = "<div class='col' ><div class='row'><h2>Pregunta " + (pregunta + 1) + " de " + preguntas.length + "</h2></div>";
+    pantalla += "<div class ='row'><p>" + preguntas[pregunta] + "</p></div>";
+    pantalla += "<div class='row' ><button class='btn btn-success w-25 p-3' onclick='verificarRespuesta("+pregunta+",0)'>Sí</button>";
+    pantalla += "<button class='btn btn-danger w-25 p-3' onclick='verificarRespuesta("+pregunta+",1)'>No</button></div></div>";
     return pantalla;
 }
